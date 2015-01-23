@@ -1,23 +1,15 @@
-var app = {
+(function(){
 
-    findByName: function() {
-        console.log('findByName');
-        this.store.findByName($('.search-key').val(), function(employees) {
-            var l = employees.length;
-            var e;
-            $('.employee-list').empty();
-            for (var i=0; i<l; i++) {
-                e = employees[i];
-                $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
-            }
-        });
-    },
+    var updateResult = function() {
+        var sideA = parseFloat($('.js-side-a').val(), 10);
+        var sideB = parseFloat($('.js-side-b').val(), 10);
 
-    initialize: function() {
-        this.store = new MemoryStore();
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
-    }
+        var result = sideA * 2 + sideB * 2
+        $('.result h1').html(result.toFixed(2));
+    };
 
-};
+    $('.js-side-a').on('keyup', updateResult);
 
-app.initialize();
+    $('.js-side-b').on('keyup', updateResult);
+
+})();
