@@ -1,11 +1,17 @@
-(function(){
+(function () {
 
-    var updateResult = function() {
-        var sideA = parseFloat($('.js-side-a').val(), 10);
-        var sideB = parseFloat($('.js-side-b').val(), 10);
+    var updateResult = function () {
+        var sideA = $('.js-side-a').val();
+        var sideB = $('.js-side-b').val();
 
-        var result = sideA * 2 + sideB * 2
-        $('.result h1').html(result.toFixed(2));
+        if (sideA !== '' && sideB !== '') {
+
+            var sideA = parseFloat(sideA, 10);
+            var sideB = parseFloat(sideB, 10);
+
+            var result = sideA * 2 + sideB * 2
+            $('.result h1').html(result.toFixed(2));
+        }
     };
 
     $('.js-side-a').on('keyup', updateResult);
