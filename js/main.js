@@ -24,7 +24,7 @@
         }
     };
 
-    $(sideASel).on('keyup', updateResult);
-    $(sideBSel).on('keyup', updateResult);
+    $(sideASel).on('input', updateResult);
+    $(sideBSel).on('input', updateResult);
 
 })();
