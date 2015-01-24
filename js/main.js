@@ -20,7 +20,7 @@
             var povrshina = sideALength * sideBLength;
 
             $('.content').css("margin-top", "0px");
-            $('.result h1').html("Obim: " + obim.toFixed(2) + " Povrshina: " + povrshina.toFixed(2));
+            $('.result h5').html("Obim: " + obim.toFixed(2) + " Povrshina: " + povrshina.toFixed(2));
         }
     };
 
