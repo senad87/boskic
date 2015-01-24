@@ -15,8 +15,13 @@
 .content {
     margin-top: 120px;
 }
-
-.comma {
-    width: 50px;
-    height: 36px;
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
 }
+
+
+/*.comma {*/
+    /*width: 50px;*/
+    /*height: 36px;*/
+/*}*/
