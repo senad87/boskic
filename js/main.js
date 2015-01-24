@@ -18,8 +18,11 @@
             var sideA = parseFloat(sideA, 10);
             var sideB = parseFloat(sideB, 10);
 
-            var result = sideA * 2 + sideB * 2
-            $('.result h1').html(result.toFixed(2));
+            var obim = sideA * 2 + sideB * 2;
+            var povrshina = sideA * sideB;
+
+            $('.content').css("margin-top", "0px");
+            $('.result h1').html("Obim: " + obim.toFixed(2) + " Povrshina: " + povrshina.toFixed(2));
         }
     };
 
