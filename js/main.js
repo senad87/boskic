@@ -1,23 +1,30 @@
 (function () {
 
+    var sideASel = '.js-side-a';
+    var sideBSel = '.js-side-b';
+
+    var bothSidesEntered = function (sideALength, sideBLength) {
+        return sideALength !== '' && sideBLength !== '';
+    };
+
     var updateResult = function () {
-        var sideA = $('.js-side-a').val();
-        var sideB = $('.js-side-b').val();
+        var sideALength = $(sideASel).val();
+        var sideBLength = $(sideBSel).val();
 
-        if (sideA !== '' && sideB !== '') {
+        if (bothSidesEntered(sideALength, sideBLength)) {
 
-            var sideA = parseFloat(sideA, 10);
-            var sideB = parseFloat(sideB, 10);
+            var sideALength = parseFloat(sideALength, 10);
+            var sideBLength = parseFloat(sideBLength, 10);
 
-            var obim = sideA * 2 + sideB * 2;
-            var povrshina = sideA * sideB;
+            var obim = sideALength * 2 + sideBLength * 2;
+            var povrshina = sideALength * sideBLength;
 
             $('.content').css("margin-top", "0px");
             $('.result h1').html("Obim: " + obim.toFixed(2) + " Povrshina: " + povrshina.toFixed(2));
         }
     };
 
-    $('.js-side-a').on('keyup', updateResult);
-    $('.js-side-b').on('keyup', updateResult);
+    $(sideASel).on('keyup', updateResult);
+    $(sideBSel).on('keyup', updateResult);
 
 })();
