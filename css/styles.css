@@ -21,6 +21,14 @@
     text-align: center;
 }
 
+.white, .white a {
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
 /*.comma {*/
 /*width: 50px;*/
 /*height: 36px;*/

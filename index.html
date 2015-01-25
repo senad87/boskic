@@ -19,9 +19,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="active js-menu-item-pocetna"><a href="#">Pocetna</a></li>
+                <li><a class="js-menu-item-cene" href="#about">Cene</a></li>
+                <!--<li><a href="#contact">Contact</a></li>-->
             </ul>
         </div>
         <!--/.nav-collapse -->
@@ -31,14 +31,30 @@
 
 <div class="starter-template">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-5 inputs">
-                <input placeholder="strana a" class='form-control side js-side-a' type="tel" autocomplete="off"/>
-                <input placeholder="strana b" class='form-control side js-side-b' type="tel" autocomplete="off"/>
+        <div class="row js-page-pocetna">
+            <div class="col-xs-5">
+                <input placeholder="strana a cm" class='form-control side js-side-a' type="tel" autocomplete="off"/>
+                <input placeholder="strana b cm" class='form-control side js-side-b' type="tel" autocomplete="off"/>
+
+                <select class='js-ram form-control' >
+                    <option value="uski">Uski</option>
+                    <option value="srednji">Srednji</option>
+                    <option value="shiroki">Shiroki</option>
+                </select>
+
             </div>
             <div class="col-xs-6 result">
-                <h5></h5>
+                <h2></h2>
             </div>
+        </div>
+        <div class="row hidden js-page-cene">
+            <div class="col-xs-10">
+                <input placeholder="cena stakla" class='form-control js-cena-stakla' type="tel" autocomplete="off"/>
+                <input placeholder="cena uskog rama" class='form-control js-cena-rama-uski' type="tel" autocomplete="off"/>
+                <input placeholder="cena srednjeg rama" class='form-control js-cena-rama-srednji' type="tel" autocomplete="off"/>
+                <input placeholder="cena shirokog rama" class='form-control js-cena-rama-shiroki' type="tel" autocomplete="off"/>
+                <br>
+                <button class="js-save-cena">Save</button>
         </div>
     </div>
     <!-- /.container -->
@@ -46,6 +62,7 @@
 
 <script src="lib/jquery-1.11.2.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/cene.js"></script>
 <script src="js/main.js"></script>
 
 </body>
